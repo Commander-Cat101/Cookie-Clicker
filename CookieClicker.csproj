@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <RootNamespace>CookieClicker</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>CookieClicker</AssemblyName>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <Optimize>True</Optimize>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Clicker\Clicker-0.png" />
+      <None Remove="Clicker\Clicker-1.png" />
+      <None Remove="Clicker\Clicker-10.png" />
+      <None Remove="Clicker\Clicker-11.png" />
+      <None Remove="Clicker\Clicker-2.png" />
+      <None Remove="Clicker\Clicker-3.png" />
+      <None Remove="Clicker\Clicker-4.png" />
+      <None Remove="Clicker\Clicker-5.png" />
+      <None Remove="Clicker\Clicker-6.png" />
+      <None Remove="Clicker\Clicker-7.png" />
+      <None Remove="Clicker\Clicker-8.png" />
+      <None Remove="Clicker\Clicker-9.png" />
+      <None Remove="cookie.bundle" />
+    </ItemGroup>
+
+    <Import Project="..\btd6.targets" />
+</Project>
